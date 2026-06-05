@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eleganote — elegant handwriting notes, PDF import, audio, shapes, and Premium cloud backup. Download for iOS, Android, and desktop.">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta property="og:title" content="Eleganote — Elegant Note-Taking">
+  <meta property="og:description" content="Handwriting, rich documents, PDF search, and optional Premium backup.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon-512.png">
+  <title>Eleganote — Elegant Note-Taking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="assets/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="site-nav" id="siteNav">
+    <div class="wrap nav-inner">
+      <button
+        type="button"
+        class="nav-menu-toggle"
+        id="navMenuToggle"
+        aria-expanded="false"
+        aria-controls="navMenuPanel"
+        data-i18n-en="Open menu"
+        data-i18n-ar="فتح القائمة"
+        aria-label="Open menu"
+      >
+        <span class="nav-menu-bar"></span>
+        <span class="nav-menu-bar"></span>
+        <span class="nav-menu-bar"></span>
+      </button>
+      <a class="brand" href="#top">
+        <img src="assets/icon-512.png" alt="" width="38" height="38">
+        Eleganote
+      </a>
+      <div class="nav-links nav-links--desktop" aria-label="Main">
+        <a href="#features" data-i18n-en="Features" data-i18n-ar="الميزات" data-i18n>Features</a>
+        <a href="#premium" data-i18n-en="Premium" data-i18n-ar="Premium" data-i18n>Premium</a>
+        <a href="#account" data-i18n-en="Account" data-i18n-ar="الحساب" data-i18n>Account</a>
+        <a href="#download" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
+        <a href="privacy.html" data-i18n-en="Privacy" data-i18n-ar="الخصوصية" data-i18n>Privacy</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="lang-toggle" id="langToggle" aria-label="Toggle language">عربي</button>
+        <a class="btn btn-primary btn-sm" href="#download" data-i18n-en="Get app" data-i18n-ar="حمّل التطبيق" data-i18n>Get app</a>
+      </div>
+    </div>
+    <div class="nav-mobile-panel" id="navMenuPanel" hidden>
+      <div class="nav-mobile-sheet">
+        <div class="nav-mobile-panel-inner">
+          <nav class="nav-mobile-nav" aria-label="Mobile">
+            <a href="#features" class="nav-mobile-link" data-i18n-en="Features" data-i18n-ar="الميزات" data-i18n>Features</a>
+            <a href="#premium" class="nav-mobile-link" data-i18n-en="Premium" data-i18n-ar="Premium" data-i18n>Premium</a>
+            <a href="#account" class="nav-mobile-link" data-i18n-en="Account" data-i18n-ar="الحساب" data-i18n>Account</a>
+            <a href="#download" class="nav-mobile-link" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
+            <a href="privacy.html" class="nav-mobile-link nav-mobile-link--muted" data-i18n-en="Privacy" data-i18n-ar="الخصوصية" data-i18n>Privacy</a>
+          </nav>
+          <a class="btn btn-primary btn-sm nav-mobile-cta" href="#download" data-i18n-en="Get app" data-i18n-ar="حمّل التطبيق" data-i18n>Get app</a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="nav-backdrop" id="navBackdrop" hidden aria-label="Close menu"></button>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n-en="Notes · Canvas · Audio" data-i18n-ar="ملاحظات · لوحة · صوت" data-i18n>Notes · Canvas · Audio</span>
+        <h1 data-i18n-en="Notes that feel as natural as paper." data-i18n-ar="ملاحظات أنيقة بلمسة طبيعية." data-i18n>Notes that feel as natural as paper.</h1>
+        <p class="lead" data-i18n-en="Eleganote combines handwriting, shapes, rich text, PDF import, and audio in one workspace. Your notes stay on your device by default — with optional Premium backup to the cloud." data-i18n-ar="Eleganote تجمع الكتابة اليدوية والأشكال والنص الغني واستيراد PDF والصوت في مساحة واحدة. بياناتك على جهازك افتراضياً — مع نسخ Premium اختياري للسحابة." data-i18n>Eleganote combines handwriting, shapes, rich text, PDF import, and audio in one workspace. Your notes stay on your device by default — with optional Premium backup to the cloud.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download" data-i18n-en="Download the app" data-i18n-ar="تنزيل التطبيق" data-i18n>Download the app</a>
+          <a class="btn" href="#premium" data-i18n-en="View Premium" data-i18n-ar="عرض Premium" data-i18n>View Premium</a>
+        </div>
+        <div class="platform-chips">
+          <span>iOS</span><span>Android</span><span>macOS</span><span>Windows</span><span>Linux</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mock-canvas">
+          <img src="assets/icon-512.png" alt="Eleganote">
+        </div>
+        <p class="mock-caption" data-i18n-en="Write, draw, organize — all in one place." data-i18n-ar="اكتب، ارسم، نظّم — في مكان واحد." data-i18n>Write, draw, organize — all in one place.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="block" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="Explore the app" data-i18n-ar="استكشف التطبيق" data-i18n>Explore the app</h2>
+        <p data-i18n-en="A feature gallery for students, professionals, and visual thinkers." data-i18n-ar="معرض ميزات للطلاب والمحترفين ومن يفكّر بصرياً." data-i18n>A feature gallery for students, professionals, and visual thinkers.</p>
+      </div>
+      <div class="feature-gallery" id="featureGallery"></div>
+    </div>
+  </section>
+
+  <section class="block" id="premium" style="background: var(--bg-accent); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="Eleganote Premium" data-i18n-ar="Eleganote Premium" data-i18n>Eleganote Premium</h2>
+        <p data-i18n-en="Unlock unlimited documents, export, cloud backup, and more. Same account as the mobile and desktop app." data-i18n-ar="فعّل مستندات غير محدودة وتصدير ونسخ سحابي والمزيد. نفس حساب التطبيق." data-i18n>Unlock unlimited documents, export, cloud backup, and more. Same account as the mobile and desktop app.</p>
+      </div>
+      <div class="premium-perks" id="premiumPerks"></div>
+      <div class="pricing-grid" id="pricingGrid"></div>
+      <div class="checkout-panel">
+        <div class="status-pill" id="subStatus">—</div>
+        <p id="selectedPlanLabel" style="margin:0 0 0.5rem;font-weight:600;"></p>
+        <p class="alert alert-info hidden" id="checkoutSignInHint" data-i18n-en="Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium." data-i18n-ar="سجّل الدخول أدناه للدفع عبر الويب. أو اشترك من التطبيق → الملف → Premium." data-i18n>Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium.</p>
+        <div class="checkout-actions">
+          <button type="button" class="btn btn-primary" id="payCardBtn" data-i18n-en="Pay with card (USD)" data-i18n-ar="ادفع بالبطاقة (USD)" data-i18n>Pay with card (USD)</button>
+          <button type="button" class="btn" id="payCryptoBtn" data-i18n-en="Pay with crypto (yearly)" data-i18n-ar="ادفع بالعملات (سنوي)" data-i18n>Pay with crypto (yearly)</button>
+          <button type="button" class="btn btn-sm" id="refreshSubBtn" data-i18n-en="Refresh status" data-i18n-ar="تحديث الحالة" data-i18n>Refresh status</button>
+        </div>
+        <div class="alert alert-error hidden" id="checkoutError"></div>
+        <p style="margin:1rem 0 0;font-size:0.85rem;color:var(--muted);" data-i18n-en="Monthly $4.99 · 3 months $9.99 · Yearly $29.99. Crypto checkout is available for the yearly plan only." data-i18n-ar="شهري 4.99$ · 3 أشهر 9.99$ · سنوي 29.99$. العملات الرقمية للخطة السنوية فقط." data-i18n>Monthly $4.99 · 3 months $9.99 · Yearly $29.99. Crypto checkout is available for the yearly plan only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="account">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="Your account" data-i18n-ar="حسابك" data-i18n>Your account</h2>
+        <p data-i18n-en="Use the same login as in the Eleganote app — syncs Premium across devices." data-i18n-ar="استخدم نفس تسجيل الدخول في التطبيق — يزامن Premium بين الأجهزة." data-i18n>Use the same login as in the Eleganote app — syncs Premium across devices.</p>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-panel-col auth-panel-col--form">
+        <div class="auth-stack">
+        <div class="auth-card" id="authSignedOut">
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab active" data-mode="signin" data-i18n-en="Sign in" data-i18n-ar="دخول" data-i18n>Sign in</button>
+            <button type="button" class="auth-tab" data-mode="signup" data-i18n-en="Sign up" data-i18n-ar="تسجيل" data-i18n>Sign up</button>
+          </div>
+          <h3 id="authFormTitle" style="margin:0 0 1rem;">Sign in</h3>
+          <form id="authForm">
+            <div class="field">
+              <label for="authEmail" data-i18n-en="Email" data-i18n-ar="البريد" data-i18n>Email</label>
+              <input id="authEmail" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="authPassword" data-i18n-en="Password" data-i18n-ar="كلمة المرور" data-i18n>Password</label>
+              <input id="authPassword" type="password" autocomplete="current-password" minlength="6" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;" id="authSubmitBtn">Sign in</button>
+          </form>
+          <div id="resetPanel">
+            <button type="button" class="btn btn-sm" style="margin-top:0.65rem;width:100%;" id="resetBtn" data-i18n-en="Forgot password?" data-i18n-ar="نسيت كلمة المرور؟" data-i18n>Forgot password?</button>
+          </div>
+          <div class="auth-divider" data-i18n-en="or" data-i18n-ar="أو" data-i18n>or</div>
+          <button type="button" class="btn" style="width:100%;" id="googleBtn" data-i18n-en="Continue with Google" data-i18n-ar="المتابعة مع Google" data-i18n>Continue with Google</button>
+          <div class="alert alert-error hidden" id="authError"></div>
+        </div>
+        <div class="auth-card hidden" id="authSignedIn">
+          <div class="user-card">
+            <div class="user-avatar" id="userAvatar">?</div>
+            <div>
+              <strong id="userName">—</strong>
+              <div style="font-size:0.88rem;color:var(--muted);" id="userEmail">—</div>
+            </div>
+          </div>
+          <p data-i18n-en="You are signed in. Manage Premium above or open the app on your device." data-i18n-ar="أنت مسجّل الدخول. أدر Premium أعلاه أو افتح التطبيق على جهازك." data-i18n>You are signed in. Manage Premium above or open the app on your device.</p>
+          <button type="button" class="btn" id="signOutBtn" data-i18n-en="Sign out" data-i18n-ar="تسجيل الخروج" data-i18n>Sign out</button>
+        </div>
+        </div>
+        </div>
+        <div class="auth-panel-col auth-panel-col--info">
+        <aside class="auth-aside" aria-labelledby="authAsideTitle">
+          <h3 id="authAsideTitle" data-i18n-en="One account, everywhere" data-i18n-ar="حساب واحد، في كل مكان" data-i18n>One account, everywhere</h3>
+          <p class="auth-aside-lead" data-i18n-en="Sign in with the same email or Google account you use in the Eleganote app." data-i18n-ar="سجّل الدخول بنفس البريد أو حساب Google الذي تستخدمه في تطبيق Eleganote." data-i18n>Sign in with the same email or Google account you use in the Eleganote app.</p>
+          <ul class="auth-aside-list">
+            <li class="auth-aside-item">
+              <div class="auth-aside-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M4 18h16"/><path d="M6 18V10.5l3.2 3.2L12.5 6.5l3.3 7.2L19 10.5V18"/></svg>
+              </div>
+              <div>
+                <strong data-i18n-en="Subscribe on the web" data-i18n-ar="اشترك عبر الويب" data-i18n>Subscribe on the web</strong>
+                <span data-i18n-en="Choose a Premium plan above and pay without opening the app." data-i18n-ar="اختر خطة Premium أعلاه وادفع دون فتح التطبيق." data-i18n>Choose a Premium plan above and pay without opening the app.</span>
+              </div>
+            </li>
+            <li class="auth-aside-item">
+              <div class="auth-aside-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="5" width="8" height="12" rx="1.5"/><rect x="13" y="7" width="8" height="10" rx="1.5"/><path d="M7 20h10"/></svg>
+              </div>
+              <div>
+                <strong data-i18n-en="Syncs with the app" data-i18n-ar="يتزامن مع التطبيق" data-i18n>Syncs with the app</strong>
+                <span data-i18n-en="Premium status follows your account on phone, tablet, and desktop." data-i18n-ar="حالة Premium تتبع حسابك على الهاتف والجهاز اللوحي وسطح المكتب." data-i18n>Premium status follows your account on phone, tablet, and desktop.</span>
+              </div>
+            </li>
+            <li class="auth-aside-item">
+              <div class="auth-aside-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+              </div>
+              <div>
+                <strong data-i18n-en="After payment" data-i18n-ar="بعد الدفع" data-i18n>After payment</strong>
+                <span data-i18n-en="Tap Refresh status here or in Profile → Premium inside the app." data-i18n-ar="اضغط تحديث الحالة هنا أو من الملف الشخصي → Premium داخل التطبيق." data-i18n>Tap Refresh status here or in Profile → Premium inside the app.</span>
+              </div>
+            </li>
+          </ul>
+          <p class="auth-aside-note" data-i18n-en="Your notes stay on your device by default. Signing in is optional and only needed for Premium and cloud features." data-i18n-ar="ملاحظاتك تبقى على جهازك افتراضياً. تسجيل الدخول اختياري ويلزم فقط لـ Premium والمزايا السحابية." data-i18n>Your notes stay on your device by default. Signing in is optional and only needed for Premium and cloud features.</p>
+        </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="Download Eleganote" data-i18n-ar="تنزيل Eleganote" data-i18n>Download Eleganote</h2>
+        <p data-i18n-en="Get the app on your phone or computer. Edit store links in config.js." data-i18n-ar="حمّل التطبيق على هاتفك أو حاسوبك. عدّل روابط المتاجر في config.js." data-i18n>Get the app on your phone or computer. Edit store links in config.js.</p>
+      </div>
+      <div class="download-panel">
+        <div class="store-row">
+          <div>
+            <strong>Google Play</strong>
+            <small data-i18n-en="Android phones &amp; tablets" data-i18n-ar="هواتف وأجهزة Android اللوحية" data-i18n>Android phones &amp; tablets</small>
+          </div>
+          <a class="btn btn-primary btn-sm hidden" id="storePlay" href="#" target="_blank" rel="noopener">Install</a>
+          <span class="badge-soon" id="badgePlay" data-i18n-en="Configure link" data-i18n-ar="أضف الرابط" data-i18n>Configure link</span>
+        </div>
+        <div class="store-row">
+          <div>
+            <strong>Apple App Store</strong>
+            <small>iPhone &amp; iPad</small>
+          </div>
+          <a class="btn btn-primary btn-sm hidden" id="storeIos" href="#" target="_blank" rel="noopener">Install</a>
+          <span class="badge-soon" id="badgeIos" data-i18n-en="Coming soon" data-i18n-ar="قريباً" data-i18n>Coming soon</span>
+        </div>
+        <div class="store-row">
+          <div>
+            <strong data-i18n-en="Desktop" data-i18n-ar="سطح المكتب" data-i18n>Desktop</strong>
+            <small>macOS, Windows, Linux</small>
+          </div>
+          <a class="btn btn-sm hidden" id="storeDesktop" href="#" target="_blank" rel="noopener" data-i18n-en="Download" data-i18n-ar="تنزيل" data-i18n>Download</a>
+          <span class="badge-soon" id="badgeDesktop" data-i18n-en="Coming soon" data-i18n-ar="قريباً" data-i18n>Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <nav>
+        <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-ar="سياسة الخصوصية" data-i18n>Privacy Policy</a>
+        <a href="account-deletion.html" data-i18n-en="Account deletion" data-i18n-ar="حذف الحساب" data-i18n>Account deletion</a>
+        <a id="footerEmail" href="mailto:anasraad6888@gmail.com">anasraad6888@gmail.com</a>
+      </nav>
+      <p>© 2026 Eleganote · <span data-i18n-en="Developed by Anas Raad" data-i18n-ar="تطوير أنس رعد" data-i18n>Developed by Anas Raad</span></p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('footerEmail').href =
+      'mailto:' + (window.ELEGANOTE_SITE?.contactEmail || 'anasraad6888@gmail.com');
+  </script>
+</body>
+</html>

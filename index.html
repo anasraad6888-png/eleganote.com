@@ -122,8 +122,29 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="mock-canvas">
-          <img src="assets/icon-512.png" alt="Eleganote">
+        <div class="mock-canvas hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Eleganote app screenshots">
+          <div class="hero-carousel-track">
+            <img class="hero-slide is-active" src="assets/tablet-screenshots/0.jpeg" alt="Eleganote app screenshot 1" width="1200" height="896" decoding="async" fetchpriority="high">
+            <img class="hero-slide" src="assets/tablet-screenshots/1.jpeg" alt="Eleganote app screenshot 2" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/2.jpeg" alt="Eleganote app screenshot 3" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/3.jpeg" alt="Eleganote app screenshot 4" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/4.jpeg" alt="Eleganote app screenshot 5" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/5.jpeg" alt="Eleganote app screenshot 6" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/6.jpeg" alt="Eleganote app screenshot 7" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/7.jpeg" alt="Eleganote app screenshot 8" width="1200" height="896" loading="lazy" decoding="async">
+            <img class="hero-slide" src="assets/tablet-screenshots/8.jpeg" alt="Eleganote app screenshot 9" width="1200" height="896" loading="lazy" decoding="async">
+          </div>
+          <div class="hero-carousel-dots" aria-hidden="true">
+            <button type="button" class="hero-carousel-dot is-active" tabindex="-1" aria-label="Screenshot 1"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 2"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 3"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 4"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 5"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 6"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 7"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 8"></button>
+            <button type="button" class="hero-carousel-dot" tabindex="-1" aria-label="Screenshot 9"></button>
+          </div>
         </div>
         <p class="mock-caption" data-i18n-en="Write, draw, organize — all in one place." data-i18n-ar="اكتب، ارسم، نظّم — في مكان واحد." data-i18n>Write, draw, organize — all in one place.</p>
       </div>
@@ -297,6 +318,7 @@
 
   <script src="js/config.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/hero-carousel.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
   <script src="js/auth.js"></script>

@@ -631,28 +631,69 @@ h1 {
 }
 
 .mock-canvas {
-  aspect-ratio: 4/3;
+  aspect-ratio: 1200 / 896;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 27px,
-      color-mix(in srgb, var(--border) 70%, transparent) 28px
-    ),
-    var(--bg-2);
-  display: grid;
-  place-items: center;
+  background: var(--bg-2);
   position: relative;
   overflow: hidden;
 }
 
-.mock-canvas img {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+.hero-carousel-track {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.65rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 42%, transparent);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.hero-carousel-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface) 45%, transparent);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-carousel-dot.is-active {
+  background: var(--surface);
+  transform: scale(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
+  }
 }
 
 .mock-caption {

@@ -8,7 +8,7 @@ Static landing site for **Eleganote**: feature gallery, store download links, Fi
 |---------|-------------|
 | **Hero** | Tagline, platforms, CTA |
 | **Features** | Gallery of app capabilities (EN / AR) |
-| **Premium** | Plans ($4.99 / $9.99 / $29.99), card & crypto checkout |
+| **Premium** | Yearly plan ($9.99), card checkout |
 | **Account** | Email/password + Google sign-in (Firebase) |
 | **Download** | Play Store / App Store / desktop links |
 
@@ -23,7 +23,14 @@ python3 -m http.server 8080
 ## Configuration (`js/config.js`)
 
 1. **Firebase Web app** — Firebase Console → Project `eleganote-dbd15` → Add Web app → copy `appId` into `firebase.appId`.
-2. **Authorized domains** — Authentication → Settings → add your domain (e.g. `localhost`, `your-user.github.io`).
+2. **Authorized domains** (required for Google sign-in) — [Firebase Console](https://console.firebase.google.com/project/eleganote-dbd15/authentication/settings) → **Authentication** → **Settings** → **Authorized domains** → **Add domain**:
+   - `eleganote.com`
+   - `www.eleganote.com`
+   - `127.0.0.1` (only if you test via `http://127.0.0.1:8080`; prefer `http://localhost:8080` instead)
+   
+   Then [Google Cloud Console](https://console.cloud.google.com/apis/credentials) → OAuth 2.0 **Web client** → **Authorized JavaScript origins** → add:
+   - `https://eleganote.com`
+   - `https://www.eleganote.com`
 3. **Store URLs** — Set `stores.play`, `stores.appStore`, `stores.desktop`.
 4. **Subscription API** — Default: `https://eleganote-subscription.onrender.com` (same as the Flutter app).
 

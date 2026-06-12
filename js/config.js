@@ -6,14 +6,24 @@ window.ELEGANOTE_SITE = {
   subscriptionApiUrl: 'https://eleganote-subscription.onrender.com',
 
   firebase: {
-    apiKey: 'AIzaSyAnuOJl7PA8g55e7Mc2xM3kKq6j93-7SGs',
+    apiKey: 'AIzaSyAr_s_Vlzk3H_E2yZx0em3rPjK3Rktq_EY',
     authDomain: 'eleganote-dbd15.firebaseapp.com',
     projectId: 'eleganote-dbd15',
     storageBucket: 'eleganote-dbd15.firebasestorage.app',
     messagingSenderId: '977419077301',
-    // Firebase Console → Project settings → Your apps → Web → copy appId (required for sign-in on eleganote.com):
-    appId: '1:977419077301:web:0000000000000000000000',
+    appId: '1:977419077301:web:1ac17901712c3acb6aa0fc',
   },
+
+  /**
+   * Hostnames that MUST appear in Firebase Console → Authentication → Settings
+   * → Authorized domains (in addition to localhost / *.firebaseapp.com).
+   * OAuth fails with auth/unauthorized-domain if the current host is missing.
+   */
+  firebaseAuthorizedDomains: [
+    'eleganote.com',
+    'www.eleganote.com',
+    '127.0.0.1',
+  ],
 
   /** Google Sign-In Web client (OAuth 2.0, type Web) from Firebase / Google Cloud */
   googleWebClientId:
@@ -30,31 +40,13 @@ window.ELEGANOTE_SITE = {
 
   plans: [
     {
-      id: 'eleganote_premium_monthly',
-      planKey: 'monthly',
-      priceUsd: 4.99,
-      durationDays: 30,
-      titleEn: 'Monthly',
-      titleAr: 'شهري',
-      badge: null,
-    },
-    {
-      id: 'eleganote_premium_quarterly',
-      planKey: 'quarterly',
-      priceUsd: 9.99,
-      durationDays: 90,
-      titleEn: '3 months',
-      titleAr: '3 أشهر',
-      badge: 'Popular',
-    },
-    {
       id: 'eleganote_premium_yearly',
       planKey: 'yearly',
-      priceUsd: 29.99,
+      priceUsd: 9.99,
       durationDays: 365,
       titleEn: 'Yearly',
       titleAr: 'سنوي',
-      badge: 'Best value',
+      badge: null,
     },
   ],
 

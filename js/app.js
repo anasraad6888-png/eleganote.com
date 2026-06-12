@@ -67,14 +67,18 @@
   function renderPlans() {
     const grid = $('#pricingGrid');
     if (!grid) return;
+    const single = cfg.plans.length === 1;
+    grid.classList.toggle('pricing-grid--single', single);
+    if (single) selectedPlanKey = cfg.plans[0].planKey;
+
     grid.innerHTML = cfg.plans
       .map((plan) => {
-        const selected = plan.planKey === selectedPlanKey;
+        const selected = single || plan.planKey === selectedPlanKey;
         const badge = plan.badge
           ? `<span class="plan-badge">${plan.badge}</span>`
           : '';
         return `
-        <div class="plan-card ${selected ? 'selected' : ''}" data-plan="${plan.planKey}" role="button" tabindex="0">
+        <div class="plan-card ${selected ? 'selected' : ''}" data-plan="${plan.planKey}"${single ? '' : ' role="button" tabindex="0"'}>
           ${badge}
           <div class="plan-duration">${t(plan.titleEn, plan.titleAr)}</div>
           <div class="plan-price">$${plan.priceUsd.toFixed(2)}</div>
@@ -83,20 +87,22 @@
       })
       .join('');
 
-    grid.querySelectorAll('.plan-card').forEach((card) => {
-      const select = () => {
-        selectedPlanKey = card.dataset.plan;
-        renderPlans();
-        updateCheckoutUi();
-      };
-      card.addEventListener('click', select);
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          select();
-        }
+    if (!single) {
+      grid.querySelectorAll('.plan-card').forEach((card) => {
+        const select = () => {
+          selectedPlanKey = card.dataset.plan;
+          renderPlans();
+          updateCheckoutUi();
+        };
+        card.addEventListener('click', select);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            select();
+          }
+        });
       });
-    });
+    }
     updateCheckoutUi();
   }
 
@@ -164,7 +170,6 @@
     const plan = window.EleganoteCheckout?.planByKey(selectedPlanKey);
     const statusEl = $('#subStatus');
     const payCard = $('#payCardBtn');
-    const payCrypto = $('#payCryptoBtn');
     const selectedLabel = $('#selectedPlanLabel');
 
     if (!plan || !statusEl) return;
@@ -187,16 +192,12 @@
         ? t(`Premium active until ${until}`, `Premium نشط حتى ${until}`)
         : t('Premium active', 'Premium نشط');
       payCard.disabled = true;
-      payCrypto.disabled = true;
       return;
     }
 
     statusEl.className = 'status-pill';
-    statusEl.textContent = t('Choose a plan to upgrade', 'اختر خطة للترقية');
+    statusEl.textContent = t('Subscribe to unlock Premium', 'اشترك لتفعيل Premium');
     payCard.disabled = !window.EleganoteAuth?.user;
-    payCrypto.disabled =
-      !window.EleganoteAuth?.user ||
-      !window.EleganoteCheckout.supportsCrypto(plan);
   }
 
   async function refreshSubscription() {
@@ -222,7 +223,7 @@
       document.querySelector('#account')?.scrollIntoView({ behavior: 'smooth' });
       return;
     }
-    const btn = provider === 'nowpayments' ? $('#payCryptoBtn') : $('#payCardBtn');
+    const btn = $('#payCardBtn');
     btn.disabled = true;
     try {
       const url = await window.EleganoteCheckout.startCheckout(plan.id, provider);
@@ -320,6 +321,12 @@
       ],
       'auth/weak-password': [t('Password too weak (6+ chars).', 'كلمة مرور ضعيفة (6+ أحرف).')],
       'auth/popup-closed-by-user': [t('Sign-in cancelled.', 'تم إلغاء تسجيل الدخول.')],
+      'auth/unauthorized-domain': [
+        t(
+          `This domain (${window.location.hostname}) is not authorized for Google sign-in. Add it in Firebase Console → Authentication → Settings → Authorized domains, then add https://${window.location.hostname} in Google Cloud OAuth “Authorized JavaScript origins”.`,
+          `هذا النطاق (${window.location.hostname}) غير مصرّح به. أضفه في Firebase Console → Authentication → Settings → Authorized domains، ثم أضف https://${window.location.hostname} في Google Cloud ضمن Authorized JavaScript origins.`,
+        ),
+      ],
     };
     return (map[code] && map[code][0]) || err?.message || t('Authentication failed.', 'فشل المصادقة.');
   }
@@ -336,7 +343,6 @@
     setupAuthForms();
 
     $('#payCardBtn')?.addEventListener('click', () => handleCheckout('gammaltech'));
-    $('#payCryptoBtn')?.addEventListener('click', () => handleCheckout('nowpayments'));
     $('#refreshSubBtn')?.addEventListener('click', refreshSubscription);
 
     if (window.EleganoteAuth) {

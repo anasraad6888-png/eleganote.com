@@ -47,15 +47,12 @@
   }
 
   function planByKey(key) {
-    return cfg.plans.find((p) => p.planKey === key) || cfg.plans[2];
+    return cfg.plans.find((p) => p.planKey === key) || cfg.plans[0];
   }
 
   window.EleganoteCheckout = {
     fetchStatus,
     startCheckout,
     planByKey,
-    supportsCrypto(plan) {
-      return plan.planKey === 'yearly' && plan.priceUsd >= 10;
-    },
   };
 })();

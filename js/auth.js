@@ -11,6 +11,30 @@
   const app = firebase.initializeApp(cfg.firebase);
   const auth = firebase.auth();
 
+  const BUILTIN_AUTH_HOSTS = new Set([
+    'localhost',
+    'eleganote-dbd15.firebaseapp.com',
+    'eleganote-dbd15.web.app',
+  ]);
+
+  function currentAuthHost() {
+    return window.location.hostname;
+  }
+
+  function isLikelyAuthorizedHost() {
+    const host = currentAuthHost();
+    if (BUILTIN_AUTH_HOSTS.has(host)) return true;
+    const extra = cfg.firebaseAuthorizedDomains || [];
+    return extra.includes(host);
+  }
+
+  if (!isLikelyAuthorizedHost()) {
+    console.warn(
+      `[Eleganote] OAuth host "${currentAuthHost()}" is not in firebaseAuthorizedDomains. ` +
+        'Add it in Firebase Console → Authentication → Settings → Authorized domains.',
+    );
+  }
+
   if (cfg.googleWebClientId) {
     auth.useDeviceLanguage();
   }
@@ -55,7 +79,21 @@
     if (cfg.googleWebClientId) {
       provider.setCustomParameters({ prompt: 'select_account' });
     }
-    return auth.signInWithPopup(provider);
+    try {
+      return await auth.signInWithPopup(provider);
+    } catch (err) {
+      if (err?.code === 'auth/unauthorized-domain') {
+        const host = currentAuthHost();
+        const hint =
+          `Add "${host}" in Firebase Console → Authentication → Settings → Authorized domains ` +
+          `(project: ${cfg.firebase?.projectId || 'eleganote-dbd15'}). ` +
+          'Also add https://' +
+          host +
+          ' under Google Cloud → APIs & Credentials → OAuth Web client → Authorized JavaScript origins.';
+        throw Object.assign(new Error(hint), { code: err.code });
+      }
+      throw err;
+    }
   }
 
   async function signOut() {
@@ -69,6 +107,8 @@
   }
 
   window.EleganoteAuth = {
+    currentAuthHost,
+    isLikelyAuthorizedHost,
     get user() {
       return currentUser;
     },

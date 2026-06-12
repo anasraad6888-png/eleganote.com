@@ -836,6 +836,12 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.pricing-grid--single {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .plan-card {
   background: var(--surface);
   border: 1.5px solid var(--border);

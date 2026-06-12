@@ -68,7 +68,7 @@
     const grid = $('#pricingGrid');
     if (!grid) return;
     const single = cfg.plans.length === 1;
-    grid.classList.toggle('pricing-grid--single', single);
+    $('#premiumCheckoutCard')?.classList.toggle('premium-checkout-card--single', single);
     if (single) selectedPlanKey = cfg.plans[0].planKey;
 
     grid.innerHTML = cfg.plans
@@ -170,11 +170,8 @@
     const plan = window.EleganoteCheckout?.planByKey(selectedPlanKey);
     const statusEl = $('#subStatus');
     const payCard = $('#payCardBtn');
-    const selectedLabel = $('#selectedPlanLabel');
 
     if (!plan || !statusEl) return;
-
-    selectedLabel.textContent = `${t(plan.titleEn, plan.titleAr)} — $${plan.priceUsd.toFixed(2)}`;
 
     const isPremium =
       subscription?.state === 'active' &&

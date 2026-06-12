@@ -836,12 +836,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-.pricing-grid--single {
-  max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .plan-card {
   background: var(--surface);
   border: 1.5px solid var(--border);
@@ -860,6 +854,73 @@ h2 {
 .plan-card.selected {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow);
+}
+
+/* merged plan + checkout (full width) */
+.premium-checkout-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.premium-checkout-card .pricing-grid {
+  margin-bottom: 0;
+}
+
+.premium-checkout-card .plan-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  height: 100%;
+  padding: 1.75rem 1.6rem;
+  background: var(--bg-accent);
+}
+
+.premium-checkout-card .plan-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.premium-checkout-card .plan-card.selected {
+  border: none;
+  box-shadow: none;
+}
+
+.premium-checkout-main {
+  flex: 1;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.premium-checkout-note {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) {
+  .premium-checkout-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .premium-checkout-card .pricing-grid {
+    flex: 0 0 min(240px, 32%);
+    grid-template-columns: 1fr;
+    border-inline-end: 1px solid var(--border-md);
+  }
+
+  .premium-checkout-card .plan-price {
+    font-size: 2.5rem;
+  }
 }
 
 .plan-badge {
@@ -915,20 +976,11 @@ body.lang-ar .plan-badge { right: auto; left: 0.9rem; }
 
 .perk span { color: var(--ink-3); }
 
-/* checkout panel */
-.checkout-panel {
-  background: var(--surface);
-  border: 1px solid var(--border-md);
-  border-radius: var(--radius-lg);
-  padding: 1.6rem;
-  box-shadow: var(--shadow);
-}
-
 .checkout-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
 }
 
 /* status pill */

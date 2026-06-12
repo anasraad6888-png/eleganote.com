@@ -168,17 +168,18 @@
         <p data-i18n-en="Unlock unlimited documents, export, cloud backup, and more. Same account as the mobile and desktop app." data-i18n-ar="فعّل مستندات غير محدودة وتصدير ونسخ سحابي والمزيد. نفس حساب التطبيق." data-i18n>Unlock unlimited documents, export, cloud backup, and more. Same account as the mobile and desktop app.</p>
       </div>
       <div class="premium-perks" id="premiumPerks"></div>
-      <div class="pricing-grid" id="pricingGrid"></div>
-      <div class="checkout-panel">
-        <div class="status-pill" id="subStatus">—</div>
-        <p id="selectedPlanLabel" style="margin:0 0 0.5rem;font-weight:600;"></p>
-        <p class="alert alert-info hidden" id="checkoutSignInHint" data-i18n-en="Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium." data-i18n-ar="سجّل الدخول أدناه للدفع عبر الويب. أو اشترك من التطبيق → الملف → Premium." data-i18n>Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium.</p>
-        <div class="checkout-actions">
-          <button type="button" class="btn btn-primary" id="payCardBtn" data-i18n-en="Subscribe — $9.99 / year" data-i18n-ar="اشترك — 9.99$ / سنة" data-i18n>Subscribe — $9.99 / year</button>
-          <button type="button" class="btn btn-sm" id="refreshSubBtn" data-i18n-en="Refresh status" data-i18n-ar="تحديث الحالة" data-i18n>Refresh status</button>
+      <div class="premium-checkout-card" id="premiumCheckoutCard">
+        <div class="pricing-grid" id="pricingGrid"></div>
+        <div class="premium-checkout-main">
+          <div class="status-pill" id="subStatus">—</div>
+          <p class="alert alert-info hidden" id="checkoutSignInHint" data-i18n-en="Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium." data-i18n-ar="سجّل الدخول أدناه للدفع عبر الويب. أو اشترك من التطبيق → الملف → Premium." data-i18n>Sign in below to pay on the web. You can also subscribe from Eleganote → Profile → Premium.</p>
+          <div class="checkout-actions">
+            <button type="button" class="btn btn-primary" id="payCardBtn" data-i18n-en="Subscribe — $9.99 / year" data-i18n-ar="اشترك — 9.99$ / سنة" data-i18n>Subscribe — $9.99 / year</button>
+            <button type="button" class="btn btn-sm" id="refreshSubBtn" data-i18n-en="Refresh status" data-i18n-ar="تحديث الحالة" data-i18n>Refresh status</button>
+          </div>
+          <div class="alert alert-error hidden" id="checkoutError"></div>
+          <p class="premium-checkout-note" data-i18n-en="One plan: full year of Premium for $9.99. Secure card checkout in USD." data-i18n-ar="خطة واحدة: سنة كاملة من Premium مقابل 9.99$. دفع آمن بالبطاقة بالدولار." data-i18n>One plan: full year of Premium for $9.99. Secure card checkout in USD.</p>
         </div>
-        <div class="alert alert-error hidden" id="checkoutError"></div>
-        <p style="margin:1rem 0 0;font-size:0.85rem;color:var(--muted);" data-i18n-en="One plan: full year of Premium for $9.99. Secure card checkout in USD." data-i18n-ar="خطة واحدة: سنة كاملة من Premium مقابل 9.99$. دفع آمن بالبطاقة بالدولار." data-i18n>One plan: full year of Premium for $9.99. Secure card checkout in USD.</p>
       </div>
     </div>
   </section>

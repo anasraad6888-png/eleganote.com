@@ -1398,6 +1398,26 @@ footer nav a {
 
 footer nav a:hover { color: var(--ink); text-decoration: none; }
 
+.footer-badge {
+  margin-bottom: 0.85rem;
+}
+
+.footer-badge a {
+  display: inline-block;
+  opacity: 0.88;
+  transition: opacity 0.15s;
+}
+
+.footer-badge a:hover {
+  opacity: 1;
+}
+
+.footer-badge img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 /* ══════════════════════════════════════
    RTL FIXES
 ══════════════════════════════════════ */

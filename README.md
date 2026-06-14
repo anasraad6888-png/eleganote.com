@@ -6,7 +6,7 @@ Static landing site for **Eleganote**: feature gallery, store download links, Fi
 
 | Section | Description |
 |---------|-------------|
-| **Hero** | Tagline, platforms, CTA |
+| **Hero** | Tagline, getting-started steps, platforms, CTA |
 | **Features** | Gallery of app capabilities (EN / AR) |
 | **Premium** | Yearly plan ($9.99), card checkout |
 | **Account** | Email/password + Google sign-in (Firebase) |

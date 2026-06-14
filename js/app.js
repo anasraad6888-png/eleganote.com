@@ -119,6 +119,9 @@
       playRow.href = play;
       playRow.classList.remove('hidden');
       $('#badgePlay')?.classList.add('hidden');
+    } else if (playRow) {
+      playRow.classList.add('hidden');
+      $('#badgePlay')?.classList.remove('hidden');
     }
     if (appStore && iosRow) {
       iosRow.href = appStore;

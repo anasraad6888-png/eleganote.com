@@ -580,9 +580,27 @@ h1 {
 .lead {
   font-size: 1.08rem;
   color: var(--ink-3);
-  margin: 0 0 1.8rem;
+  margin: 0 0 1.25rem;
   max-width: 34rem;
   line-height: 1.7;
+}
+
+.getting-started {
+  margin: 0 0 1.5rem;
+  padding: 0 0 0 1.2rem;
+  max-width: 34rem;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.getting-started li {
+  margin-bottom: 0.35rem;
+}
+
+.getting-started li::marker {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .cta-row {

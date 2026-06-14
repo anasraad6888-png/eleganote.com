@@ -7,6 +7,7 @@
   <meta name="application-name" content="Eleganote">
   <meta name="theme-color" content="#f7f4ef">
   <link rel="canonical" href="https://eleganote.com/">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM site summary">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <meta property="og:title" content="Eleganote — Elegant Note-Taking">
   <meta property="og:description" content="Handwriting, rich documents, PDF search, and optional Premium backup.">
@@ -87,7 +88,7 @@
       </div>
       <div class="nav-actions">
         <button type="button" class="lang-toggle" id="langToggle" aria-label="Toggle language">عربي</button>
-        <a class="btn btn-primary btn-sm" href="#download" data-i18n-en="Get app" data-i18n-ar="حمّل التطبيق" data-i18n>Get app</a>
+        <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Get app" data-i18n-ar="حمّل التطبيق" data-i18n>Get app</a>
       </div>
     </div>
     <div class="nav-mobile-panel" id="navMenuPanel" hidden>
@@ -100,7 +101,7 @@
             <a href="#download" class="nav-mobile-link" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
             <a href="privacy.html" class="nav-mobile-link nav-mobile-link--muted" data-i18n-en="Privacy" data-i18n-ar="الخصوصية" data-i18n>Privacy</a>
           </nav>
-          <a class="btn btn-primary btn-sm nav-mobile-cta" href="#download" data-i18n-en="Get app" data-i18n-ar="حمّل التطبيق" data-i18n>Get app</a>
+          <a class="btn btn-primary btn-sm nav-mobile-cta" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Get on Google Play" data-i18n-ar="حمّل من Google Play" data-i18n>Get on Google Play</a>
         </div>
       </div>
     </div>
@@ -113,8 +114,14 @@
         <span class="eyebrow" data-i18n-en="Notes · Canvas · Audio" data-i18n-ar="ملاحظات · لوحة · صوت" data-i18n>Notes · Canvas · Audio</span>
         <h1 data-i18n-en="Eleganote — notes that feel as natural as paper." data-i18n-ar="Eleganote — ملاحظات أنيقة بلمسة طبيعية." data-i18n>Eleganote — notes that feel as natural as paper.</h1>
         <p class="lead" data-i18n-en="Eleganote combines handwriting, shapes, rich text, PDF import, and audio in one workspace. Your notes stay on your device by default — with optional Premium backup to the cloud." data-i18n-ar="Eleganote تجمع الكتابة اليدوية والأشكال والنص الغني واستيراد PDF والصوت في مساحة واحدة. بياناتك على جهازك افتراضياً — مع نسخ Premium اختياري للسحابة." data-i18n>Eleganote combines handwriting, shapes, rich text, PDF import, and audio in one workspace. Your notes stay on your device by default — with optional Premium backup to the cloud.</p>
+        <ol class="getting-started" aria-label="Getting started">
+          <li data-i18n-en="Download Eleganote from Google Play (Android)." data-i18n-ar="حمّل Eleganote من Google Play (Android)." data-i18n>Download Eleganote from Google Play (Android).</li>
+          <li data-i18n-en="Open the app and create your first note." data-i18n-ar="افتح التطبيق وأنشئ ملاحظتك الأولى." data-i18n>Open the app and create your first note.</li>
+          <li data-i18n-en="Optional: sign in on this site or in the app for Premium." data-i18n-ar="اختياري: سجّل الدخول هنا أو في التطبيق لـ Premium." data-i18n>Optional: sign in on this site or in the app for Premium.</li>
+        </ol>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#download" data-i18n-en="Download the app" data-i18n-ar="تنزيل التطبيق" data-i18n>Download the app</a>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Get on Google Play" data-i18n-ar="حمّل من Google Play" data-i18n>Get on Google Play</a>
+          <a class="btn" href="#download" data-i18n-en="All platforms" data-i18n-ar="كل المنصات" data-i18n>All platforms</a>
           <a class="btn" href="#premium" data-i18n-en="View Premium" data-i18n-ar="عرض Premium" data-i18n>View Premium</a>
         </div>
         <div class="platform-chips">
@@ -274,7 +281,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 data-i18n-en="Download Eleganote" data-i18n-ar="تنزيل Eleganote" data-i18n>Download Eleganote</h2>
-        <p data-i18n-en="Get the app on your phone or computer. Edit store links in config.js." data-i18n-ar="حمّل التطبيق على هاتفك أو حاسوبك. عدّل روابط المتاجر في config.js." data-i18n>Get the app on your phone or computer. Edit store links in config.js.</p>
+        <p data-i18n-en="Android is available now on Google Play. iOS and desktop builds are coming soon." data-i18n-ar="Android متاح الآن على Google Play. إصدارات iOS وسطح المكتب قريباً." data-i18n>Android is available now on Google Play. iOS and desktop builds are coming soon.</p>
       </div>
       <div class="download-panel">
         <div class="store-row">
@@ -282,8 +289,8 @@
             <strong>Google Play</strong>
             <small data-i18n-en="Android phones &amp; tablets" data-i18n-ar="هواتف وأجهزة Android اللوحية" data-i18n>Android phones &amp; tablets</small>
           </div>
-          <a class="btn btn-primary btn-sm hidden" id="storePlay" href="#" target="_blank" rel="noopener">Install</a>
-          <span class="badge-soon" id="badgePlay" data-i18n-en="Configure link" data-i18n-ar="أضف الرابط" data-i18n>Configure link</span>
+          <a class="btn btn-primary btn-sm" id="storePlay" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Install" data-i18n-ar="تثبيت" data-i18n>Install</a>
+          <span class="badge-soon hidden" id="badgePlay" data-i18n-en="Coming soon" data-i18n-ar="قريباً" data-i18n>Coming soon</span>
         </div>
         <div class="store-row">
           <div>

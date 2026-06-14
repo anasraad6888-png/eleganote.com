@@ -1,0 +1,32 @@
+# Eleganote
+
+> Eleganote is a cross-platform note-taking app for handwriting, PDFs, rich text, shapes, and audio. Notes are stored locally by default; Premium adds cloud backup and export.
+
+## Getting started
+
+1. Download the Android app from Google Play: https://play.google.com/store/apps/details?id=com.anasraad.eleganote
+2. Open Eleganote and create your first document.
+3. Optional: sign in on https://eleganote.com/ or in the app (Profile → Premium) for cloud backup and Premium features.
+
+## Product
+
+- Name: Eleganote
+- Category: Productivity / note-taking
+- Platforms: Android (available), iOS and desktop (coming soon)
+- Tech: Flutter, offline-first local storage (Hive), optional Firebase auth and cloud backup
+
+## Key pages
+
+- Home: https://eleganote.com/
+- Privacy policy: https://eleganote.com/privacy.html
+- Account deletion: https://eleganote.com/account-deletion.html
+- Sitemap: https://eleganote.com/sitemap.xml
+
+## Support
+
+- Contact: anasraad6888@gmail.com
+
+## Optional Premium
+
+- Yearly plan: $9.99 USD
+- Subscribe on the website (Account section) or in the app (Profile → Premium)

@@ -1398,7 +1398,12 @@ footer nav a {
 
 footer nav a:hover { color: var(--ink); text-decoration: none; }
 
-.footer-badge {
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 1.25rem;
   margin-bottom: 0.85rem;
 }
 
@@ -1416,6 +1421,22 @@ footer nav a:hover { color: var(--ink); text-decoration: none; }
   display: block;
   height: auto;
   max-width: 100%;
+}
+
+.footer-badge--tinystartups a {
+  transform: scale(0.78);
+  transform-origin: center;
+}
+
+@media (max-width: 520px) {
+  .footer-badges {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .footer-badge--tinystartups a {
+    transform: scale(0.68);
+  }
 }
 
 /* ══════════════════════════════════════

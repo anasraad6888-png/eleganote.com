@@ -331,6 +331,24 @@
     return (map[code] && map[code][0]) || err?.message || t('Authentication failed.', 'فشل المصادقة.');
   }
 
+  function setupWaitlist() {
+    const toggle = $('#waitlistToggle');
+    const embed = $('#waitlistEmbed');
+    const iframe = embed?.querySelector('iframe');
+    if (!toggle || !embed) return;
+
+    toggle.addEventListener('click', () => {
+      embed.classList.remove('hidden');
+      embed.hidden = false;
+      toggle.classList.add('hidden');
+      toggle.hidden = true;
+      if (iframe && !iframe.src) {
+        iframe.src = iframe.dataset.src || '';
+      }
+      embed.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+
   function init() {
     setLang(lang);
     $('#langToggle')?.addEventListener('click', () =>
@@ -341,6 +359,7 @@
     renderPremiumPerks();
     renderStores();
     setupAuthForms();
+    setupWaitlist();
 
     $('#payCardBtn')?.addEventListener('click', () => handleCheckout('gammaltech'));
     $('#refreshSubBtn')?.addEventListener('click', refreshSubscription);

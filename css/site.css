@@ -1341,16 +1341,25 @@ body.lang-ar .plan-badge { right: auto; left: 0.9rem; }
 }
 
 .waitlist-panel h3 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.6rem;
   font-family: 'DM Serif Display', serif;
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--ink);
 }
 
+.waitlist-intro {
+  margin: 0 0 1.1rem;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
 .waitlist-embed {
   display: flex;
   justify-content: center;
+  margin-top: 1.25rem;
 }
 
 .waitlist-embed iframe {

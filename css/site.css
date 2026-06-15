@@ -1357,16 +1357,23 @@ body.lang-ar .plan-badge { right: auto; left: 0.9rem; }
 }
 
 .waitlist-embed {
-  display: flex;
+  display: none;
   justify-content: center;
+  width: 100%;
   margin-top: 1.25rem;
+}
+
+.waitlist-embed.is-open,
+.waitlist-embed:not([hidden]) {
+  display: flex;
 }
 
 .waitlist-embed iframe {
   display: block;
   width: 100%;
   max-width: 540px;
-  min-height: 380px;
+  height: 420px;
+  min-height: 420px;
   border: 0;
   border-radius: var(--radius-lg);
   background: transparent;

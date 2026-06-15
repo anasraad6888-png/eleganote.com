@@ -1331,6 +1331,38 @@ body.lang-ar .plan-badge { right: auto; left: 0.9rem; }
   box-shadow: var(--shadow);
 }
 
+.waitlist-panel {
+  margin-top: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border-md);
+  border-radius: var(--radius-xl);
+  padding: 1.4rem 1.6rem 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.waitlist-panel h3 {
+  margin: 0 0 1rem;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.waitlist-embed {
+  display: flex;
+  justify-content: center;
+}
+
+.waitlist-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  min-height: 380px;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: transparent;
+}
+
 .store-row {
   display: flex;
   align-items: center;

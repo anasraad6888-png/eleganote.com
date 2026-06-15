@@ -1463,13 +1463,27 @@ footer nav a {
 
 footer nav a:hover { color: var(--ink); text-decoration: none; }
 
+.footer-featured {
+  margin: 1.25rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-featured-title {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
 .footer-badges {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1rem 1.25rem;
-  margin-bottom: 0.85rem;
 }
 
 .footer-badge a {

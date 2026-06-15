@@ -441,8 +441,12 @@ html[dir='rtl'] .nav-mobile-link::after {
     animation-delay: 0.11s;
   }
 
+  .nav-mobile-panel:not([hidden]) .nav-mobile-link:nth-child(6) {
+    animation-delay: 0.13s;
+  }
+
   .nav-mobile-panel:not([hidden]) .nav-mobile-cta {
-    animation: navLinkReveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) 0.13s both;
+    animation: navLinkReveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
   }
 
   .nav-backdrop:not([hidden]) {
@@ -623,6 +627,17 @@ h1 {
   border: 1px solid var(--border-md);
   background: var(--surface);
   color: var(--ink-3);
+}
+
+.platform-chip--live {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border-md));
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.platform-chip--soon {
+  opacity: 0.9;
 }
 
 /* hero visual card */
@@ -1332,12 +1347,14 @@ body.lang-ar .plan-badge { right: auto; left: 0.9rem; }
 }
 
 .waitlist-panel {
-  margin-top: 1.25rem;
   background: var(--surface);
   border: 1px solid var(--border-md);
   border-radius: var(--radius-xl);
   padding: 1.4rem 1.6rem 1.6rem;
   box-shadow: var(--shadow);
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .waitlist-panel h3 {

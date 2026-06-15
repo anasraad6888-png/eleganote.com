@@ -80,10 +80,11 @@
         Eleganote
       </a>
       <div class="nav-links nav-links--desktop" aria-label="Main">
+        <a href="#download" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
         <a href="#features" data-i18n-en="Features" data-i18n-ar="الميزات" data-i18n>Features</a>
+        <a href="#waitlist" data-i18n-en="Waitlist" data-i18n-ar="قائمة الانتظار" data-i18n>Waitlist</a>
         <a href="#premium" data-i18n-en="Premium" data-i18n-ar="Premium" data-i18n>Premium</a>
         <a href="#account" data-i18n-en="Account" data-i18n-ar="الحساب" data-i18n>Account</a>
-        <a href="#download" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
         <a href="privacy.html" data-i18n-en="Privacy" data-i18n-ar="الخصوصية" data-i18n>Privacy</a>
       </div>
       <div class="nav-actions">
@@ -95,10 +96,11 @@
       <div class="nav-mobile-sheet">
         <div class="nav-mobile-panel-inner">
           <nav class="nav-mobile-nav" aria-label="Mobile">
+            <a href="#download" class="nav-mobile-link" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
             <a href="#features" class="nav-mobile-link" data-i18n-en="Features" data-i18n-ar="الميزات" data-i18n>Features</a>
+            <a href="#waitlist" class="nav-mobile-link" data-i18n-en="Waitlist" data-i18n-ar="قائمة الانتظار" data-i18n>Waitlist</a>
             <a href="#premium" class="nav-mobile-link" data-i18n-en="Premium" data-i18n-ar="Premium" data-i18n>Premium</a>
             <a href="#account" class="nav-mobile-link" data-i18n-en="Account" data-i18n-ar="الحساب" data-i18n>Account</a>
-            <a href="#download" class="nav-mobile-link" data-i18n-en="Download" data-i18n-ar="التنزيل" data-i18n>Download</a>
             <a href="privacy.html" class="nav-mobile-link nav-mobile-link--muted" data-i18n-en="Privacy" data-i18n-ar="الخصوصية" data-i18n>Privacy</a>
           </nav>
           <a class="btn btn-primary btn-sm nav-mobile-cta" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Get on Google Play" data-i18n-ar="حمّل من Google Play" data-i18n>Get on Google Play</a>
@@ -121,11 +123,13 @@
         </ol>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Get on Google Play" data-i18n-ar="حمّل من Google Play" data-i18n>Get on Google Play</a>
-          <a class="btn" href="#download" data-i18n-en="All platforms" data-i18n-ar="كل المنصات" data-i18n>All platforms</a>
-          <a class="btn" href="#premium" data-i18n-en="View Premium" data-i18n-ar="عرض Premium" data-i18n>View Premium</a>
+          <a class="btn" href="#waitlist" data-i18n-en="Join waitlist" data-i18n-ar="انضم لقائمة الانتظار" data-i18n>Join waitlist</a>
+          <a class="btn" href="#features" data-i18n-en="See features" data-i18n-ar="استكشف الميزات" data-i18n>See features</a>
         </div>
         <div class="platform-chips">
-          <span>iOS</span><span>Android</span><span>macOS</span><span>Windows</span><span>Linux</span>
+          <span class="platform-chip platform-chip--live">Android ✓</span>
+          <span class="platform-chip platform-chip--soon" data-i18n data-i18n-en="iOS — waitlist" data-i18n-ar="iOS — قائمة انتظار" data-i18n>iOS — waitlist</span>
+          <span class="platform-chip platform-chip--soon" data-i18n data-i18n-en="Desktop — waitlist" data-i18n-ar="سطح المكتب — قائمة انتظار" data-i18n>Desktop — waitlist</span>
         </div>
       </div>
       <div class="hero-visual">
@@ -158,6 +162,25 @@
     </div>
   </header>
 
+  <section class="block" id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="Download for Android" data-i18n-ar="تنزيل لـ Android" data-i18n>Download for Android</h2>
+        <p data-i18n-en="Eleganote is live on Google Play for phones and tablets. Install free and start your first note in minutes." data-i18n-ar="Eleganote متاح على Google Play للهواتف والأجهزة اللوحية. ثبّته مجاناً وابدأ ملاحظتك الأولى خلال دقائق." data-i18n>Eleganote is live on Google Play for phones and tablets. Install free and start your first note in minutes.</p>
+      </div>
+      <div class="download-panel">
+        <div class="store-row">
+          <div>
+            <strong>Google Play</strong>
+            <small data-i18n-en="Android phones &amp; tablets" data-i18n-ar="هواتف وأجهزة Android اللوحية" data-i18n>Android phones &amp; tablets</small>
+          </div>
+          <a class="btn btn-primary btn-sm" id="storePlay" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Install" data-i18n-ar="تثبيت" data-i18n>Install</a>
+          <span class="badge-soon hidden" id="badgePlay" data-i18n-en="Coming soon" data-i18n-ar="قريباً" data-i18n>Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="features">
     <div class="wrap">
       <div class="section-head">
@@ -165,6 +188,29 @@
         <p data-i18n-en="A feature gallery for students, professionals, and visual thinkers." data-i18n-ar="معرض ميزات للطلاب والمحترفين ومن يفكّر بصرياً." data-i18n>A feature gallery for students, professionals, and visual thinkers.</p>
       </div>
       <div class="feature-gallery" id="featureGallery"></div>
+    </div>
+  </section>
+
+  <section class="block" id="waitlist">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n-en="iOS &amp; desktop — launch waitlist" data-i18n-ar="iOS وسطح المكتب — قائمة انتظار الإطلاق" data-i18n>iOS &amp; desktop — launch waitlist</h2>
+        <p data-i18n-en="iOS and desktop versions are coming soon. Leave your email — we'll notify you on launch day." data-i18n-ar="إصدارات iOS وسطح المكتب قريباً. اترك بريدك — سنخبرك يوم الإطلاق." data-i18n>iOS and desktop versions are coming soon. Leave your email — we'll notify you on launch day.</p>
+      </div>
+      <div class="waitlist-panel">
+        <button type="button" class="btn btn-primary" id="waitlistToggle" aria-controls="waitlistEmbed" aria-expanded="false" data-i18n-en="Join the waitlist" data-i18n-ar="انضم لقائمة الانتظار" data-i18n>Join the waitlist</button>
+        <div class="waitlist-embed" id="waitlistEmbed" hidden>
+          <iframe
+            title="Eleganote launch waitlist"
+            width="540"
+            height="420"
+            data-src="https://2b7e5f6d.sibforms.com/v2/serve/MUIFAEbGJA02KCAo3RsoYHAPVLgKQwElx4i09fYrP1zVkPiR_soD3RHGMhsw1im4OMBqV6_vf-xoKw66jmwUL1bFyT3UuNMfpEbpv8vwlFvt_pa7nMgMcKLGBB_ZQT5nzC19eUcsUOkw1B9S92pH1dc1TOlhDCYj4_svARv4fWZUCJIF39lGrqjAwFy5I1MGyzzfNCMvjmjJ9MalQA=="
+            frameborder="0"
+            scrolling="auto"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -272,41 +318,6 @@
           </ul>
           <p class="auth-aside-note" data-i18n-en="Your notes stay on your device by default. Signing in is optional and only needed for Premium and cloud features." data-i18n-ar="ملاحظاتك تبقى على جهازك افتراضياً. تسجيل الدخول اختياري ويلزم فقط لـ Premium والمزايا السحابية." data-i18n>Your notes stay on your device by default. Signing in is optional and only needed for Premium and cloud features.</p>
         </aside>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="download">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 data-i18n-en="Download Eleganote" data-i18n-ar="تنزيل Eleganote" data-i18n>Download Eleganote</h2>
-        <p data-i18n-en="Android is on Google Play now. Join the waitlist for iOS and desktop — we'll email you on launch day." data-i18n-ar="Android متاح على Google Play الآن. انضم لقائمة الانتظار لـ iOS وسطح المكتب — سنرسل لك بريداً عند الإطلاق." data-i18n>Android is on Google Play now. Join the waitlist for iOS and desktop — we'll email you on launch day.</p>
-      </div>
-      <div class="download-panel">
-        <div class="store-row">
-          <div>
-            <strong>Google Play</strong>
-            <small data-i18n-en="Android phones &amp; tablets" data-i18n-ar="هواتف وأجهزة Android اللوحية" data-i18n>Android phones &amp; tablets</small>
-          </div>
-          <a class="btn btn-primary btn-sm" id="storePlay" href="https://play.google.com/store/apps/details?id=com.anasraad.eleganote" target="_blank" rel="noopener" data-i18n-en="Install" data-i18n-ar="تثبيت" data-i18n>Install</a>
-          <span class="badge-soon hidden" id="badgePlay" data-i18n-en="Coming soon" data-i18n-ar="قريباً" data-i18n>Coming soon</span>
-        </div>
-      </div>
-      <div class="waitlist-panel" id="waitlist">
-        <h3 data-i18n-en="iOS &amp; desktop — launch waitlist" data-i18n-ar="iOS وسطح المكتب — قائمة انتظار الإطلاق" data-i18n>iOS &amp; desktop — launch waitlist</h3>
-        <p class="waitlist-intro" data-i18n-en="iOS and desktop versions are coming soon. Leave your email — we'll notify you on launch day." data-i18n-ar="إصدارات iOS وسطح المكتب قريباً. اترك بريدك — سنخبرك يوم الإطلاق." data-i18n>iOS and desktop versions are coming soon. Leave your email — we'll notify you on launch day.</p>
-        <button type="button" class="btn btn-primary" id="waitlistToggle" aria-controls="waitlistEmbed" aria-expanded="false" data-i18n-en="Join the waitlist" data-i18n-ar="انضم لقائمة الانتظار" data-i18n>Join the waitlist</button>
-        <div class="waitlist-embed" id="waitlistEmbed" hidden>
-          <iframe
-            title="Eleganote launch waitlist"
-            width="540"
-            height="420"
-            data-src="https://2b7e5f6d.sibforms.com/v2/serve/MUIFAEbGJA02KCAo3RsoYHAPVLgKQwElx4i09fYrP1zVkPiR_soD3RHGMhsw1im4OMBqV6_vf-xoKw66jmwUL1bFyT3UuNMfpEbpv8vwlFvt_pa7nMgMcKLGBB_ZQT5nzC19eUcsUOkw1B9S92pH1dc1TOlhDCYj4_svARv4fWZUCJIF39lGrqjAwFy5I1MGyzzfNCMvjmjJ9MalQA=="
-            frameborder="0"
-            scrolling="auto"
-            allowfullscreen
-          ></iframe>
         </div>
       </div>
     </div>
